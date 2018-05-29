@@ -31,6 +31,8 @@ def checkout(skus):
     single_b = 0
     print(my_dict)
     for k, v in my_dict.items():
+        print("k: ", k)
+        print("sum: ", sum_)
         if k == "A":
             print("HEre")
             if my_dict[k] >= 5:
@@ -39,9 +41,10 @@ def checkout(skus):
 
             if (my_dict[k] - (my_dict[k] // 5)) >= 3:
                 sum_ += (my_dict[k] // 3) * 130
-                print(sum_)
-            sum_ += (my_dict[k] - ((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3)) * 50
 
+            print(((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3))
+            sum_ += (my_dict[k] - ((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3)) * 50
+            print(sum_)
         if k == "B":
             if my_dict[k] >= 2:
                 twos = my_dict[k] // 2
