@@ -19,11 +19,11 @@ def checkout(skus):
             my_dict.update({item: my_dict[item] + 1})
         elif item == "E":
             my_dict.update({item: my_dict[item] + 1})
-        elif item == "A" and a == 2:
+        elif item == "A":
             my_dict.update({item: my_dict[item] + 1})
-        elif item == "B" and b == 1:
+        elif item == "B":
             my_dict.update({item: my_dict[item] + 1})
-        elif item == "E" and e == 1:
+        elif item == "E":
             my_dict.update({item: my_dict[item] + 1})
         else:
             return -1
