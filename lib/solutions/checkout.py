@@ -28,15 +28,18 @@ def checkout(skus):
             return -1
 
     sum_ = 0
+    single_b = 0
+    print(my_dict)
     for k, v in my_dict.items():
         if k == "A":
+            print("HEre")
             if my_dict[k] >= 5:
                 fivers = my_dict[k] // 5
                 sum_ += fivers * 200
 
             if (my_dict[k] - (my_dict[k] // 5)) >= 3:
                 sum_ += (my_dict[k] // 3) * 130
-
+                print(sum_)
             sum_ += (my_dict[k] - ((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3)) * 50
 
         if k == "B":
@@ -62,4 +65,8 @@ def checkout(skus):
                 elif single_b <= two_e:
                     sum_ -= single_b * 30
 
+    print("sum: ", sum_)
     return int(sum_)
+
+
+checkout("AAA")
