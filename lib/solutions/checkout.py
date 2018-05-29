@@ -28,7 +28,7 @@ def checkout(skus):
         else:
             return -1
 
-    for k, v in my_dict:
+    for k, v in my_dict.items():
         if k == "A":
             fivers = my_dict[k] % 5
             sum_ += fivers * 200
