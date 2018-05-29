@@ -11,20 +11,20 @@ def checkout(skus):
 
     for item in skus:
 
-        if item == "A" and a != 3:
+        if item == "A" and a != 2:
             sum_ += 50
             a += 1
-        elif item == "B" and b != 2:
+        elif item == "B" and b != 1:
             sum_ += 30
             b += 1
         elif item == "C":
             sum_ += 20
         elif item == "D":
             sum_ += 15
-        elif item == "A" and a == 3:
+        elif item == "A" and a == 2:
             sum_ += 30
             a = 0
-        elif item == "B" and b == 2:
+        elif item == "B" and b == 1:
             sum_ += 15
             b = 0
         else:
