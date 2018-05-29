@@ -5,7 +5,6 @@
 
 def checkout(skus):
 
-    sum_ = 0
     my_dict = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0}
 
     for item in skus:
@@ -28,14 +27,18 @@ def checkout(skus):
         else:
             return -1
 
+    sum_ = 0
     for k, v in my_dict.items():
         if k == "A":
             if my_dict[k] >= 5:
                 fivers = my_dict[k] % 5
                 sum_ += fivers * 200
-            if (my_dict[k] - (fivers * 5)) > 3:
-                threes = fivers % 3
-                sum_ += threes * 130
+            if (my_dict[k] - (fivers * 5)) >= 3:
+                if fivers:
+                    threes = fivers % 3
+                    sum_ += threes * 130
+                else:
+                    sum_ += (my_dict[k] % 3) * 130
             sum_ += my_dict[k] * 50
 
         if k == "B":
