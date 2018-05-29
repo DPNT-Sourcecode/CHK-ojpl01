@@ -33,8 +33,7 @@ def checkout(skus):
     for k, v in my_dict.items():
         print("k: ", k)
         print("sum: ", sum_)
-        if k == "A":
-            print("HEre")
+        if k == "A" and my_dict[k] > 0:
             if my_dict[k] >= 5:
                 fivers = my_dict[k] // 5
                 sum_ += fivers * 200
@@ -45,7 +44,7 @@ def checkout(skus):
             print(((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3))
             sum_ += (my_dict[k] - ((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3)) * 50
             print(sum_)
-        if k == "B":
+        if k == "B" and my_dict[k] > 0:
             if my_dict[k] >= 2:
                 twos = my_dict[k] // 2
                 sum_ += twos * 45
@@ -53,16 +52,19 @@ def checkout(skus):
 
             sum_ += (my_dict[k] - ((my_dict[k] // 2) * 2)) * 30
 
-        if k == "C":
+        if k == "C" and my_dict[k] > 0:
             sum_ += my_dict[k] * 20
 
-        if k == "D":
+        if k == "D" and my_dict[k] > 0:
             sum_ += my_dict[k] * 15
 
         if k == "E":
+            print("here")
             sum_ = my_dict[k] * 40
             two_e = my_dict[k] // 2
+
             if single_b >= 1 and two_e:
+                print("here")
                 if single_b > two_e:
                     sum_ -= two_e * 30
                 elif single_b <= two_e:
