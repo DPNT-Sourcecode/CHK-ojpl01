@@ -35,10 +35,12 @@ def checkout(skus):
             if my_dict[k] >= 5:
                 fivers = my_dict[k] // 5
                 sum_ += fivers * 200
-            if (my_dict[k] - (my_dict[k] // 5)) >= 3:
+
+            if (my_dict[k] - ((my_dict[k] // 5) * 5)) >= 3:
                 sum_ += (my_dict[k] // 3) * 130
-            print(my_dict[k] - ((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3))
-            sum_ += (my_dict[k] - ((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3)) * 50
+
+            print((my_dict[k] - (((my_dict[k] // 5) * 5) + ((my_dict[k] // 3) * 3))))
+            sum_ += (my_dict[k] - (((my_dict[k] // 5) * 5) + ((my_dict[k] // 3) * 3))) * 50
 
         if k == "B" and my_dict[k] > 0:
             if my_dict[k] >= 2:
