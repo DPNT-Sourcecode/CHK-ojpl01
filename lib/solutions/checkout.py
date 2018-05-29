@@ -6,25 +6,25 @@
 def checkout(skus):
 
     sum_ = 0
-    my_dict = { "A": 0, "B": 0, "C": 0, "D": 0, "E": 0}
+    my_dict = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0}
 
     for item in skus:
         if item == "A":
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         elif item == "B":
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         elif item == "C":
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         elif item == "D":
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         elif item == "E":
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         elif item == "A" and a == 2:
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         elif item == "B" and b == 1:
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         elif item == "E" and e == 1:
-            my_dict.update({item: mydict[item]+1})
+            my_dict.update({item: my_dict[item] + 1})
         else:
             return -1
 
