@@ -31,21 +31,21 @@ def checkout(skus):
     for k, v in my_dict.items():
         if k == "A":
             if my_dict[k] >= 5:
-                fivers = my_dict[k] % 5
+                fivers = my_dict[k] // 5
                 sum_ += fivers * 200
 
-            if (my_dict[k] - (my_dict[k] % 5)) >= 3:
-                sum_ += (my_dict[k] % 3) * 130
+            if (my_dict[k] - (my_dict[k] // 5)) >= 3:
+                sum_ += (my_dict[k] // 3) * 130
 
-            sum_ += (my_dict[k] - (my_dict[k] % 5) - (my_dict[k] % 3)) * 50
+            sum_ += (my_dict[k] - ((my_dict[k] // 5) * 5) - ((my_dict[k] // 3) * 3)) * 50
 
         if k == "B":
             if my_dict[k] >= 2:
-                twos = my_dict[k] % 2
+                twos = my_dict[k] // 2
                 sum_ += twos * 45
                 single_b = my_dict[k] - (twos * 2)
 
-            sum_ += single_b * 30
+            sum_ += (my_dict[k] - ((my_dict[k] // 2) * 2)) * 30
 
         if k == "C":
             sum_ += my_dict[k] * 20
@@ -55,7 +55,7 @@ def checkout(skus):
 
         if k == "E":
             sum_ = my_dict[k] * 40
-            two_e = my_dict[k] % 2
+            two_e = my_dict[k] // 2
             if single_b >= 1 and two_e:
                 if single_b > two_e:
                     sum_ -= two_e * 30
