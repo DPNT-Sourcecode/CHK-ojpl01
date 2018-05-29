@@ -4,4 +4,4 @@
 # friend_name = unicode string
 def hello(friend_name):
 
-	return " ".join(["Hello", friend_name])
+	return friend_name
