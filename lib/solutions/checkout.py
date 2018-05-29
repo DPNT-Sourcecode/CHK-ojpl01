@@ -8,6 +8,7 @@ def checkout(skus):
     sum_ = 0
     a = 0
     b = 0
+
     for item in skus:
 
         if item == "A" and a != 3:
@@ -26,5 +27,6 @@ def checkout(skus):
         elif item == "B" and b == 2:
             sum_ += 15
             b = 0
-
+        else:
+            return -1
     return int(sum_)
