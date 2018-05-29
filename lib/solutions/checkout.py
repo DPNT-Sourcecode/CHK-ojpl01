@@ -39,7 +39,7 @@ def checkout(skus):
             if (my_dict[k] - ((my_dict[k] // 5) * 5)) >= 3:
                 sum_ += (my_dict[k] // 3) * 130
 
-            print((my_dict[k] - (((my_dict[k] // 5) * 5) + ((my_dict[k] // 3) * 3))))
+            print((my_dict[k] // 3) * 3)
             sum_ += (my_dict[k] - (((my_dict[k] // 5) * 5) + ((my_dict[k] // 3) * 3))) * 50
 
         if k == "B" and my_dict[k] > 0:
